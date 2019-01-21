@@ -54,7 +54,7 @@ $color-sub: #cccccc;
     -ms-transform: $property;
     -o-transform: $property;
     -moz-transform: $property;
-    transfrom: $property;
+    transform: $property;
 }
 
 @mixin flex-direction($property) {
@@ -93,7 +93,7 @@ html {
 
 body {
     user-select: none;
-}
+}gi
 
 .wrap {
     width: 100%;
@@ -135,7 +135,6 @@ footer {
         padding-top: 69px;
         padding-bottom: 30px;
         width: 70px;
-        height: 84px;
         img {
            width: 100%;
         }
@@ -177,7 +176,7 @@ footer {
 .header-sp {
     display: none;
     z-index: 10;
-
+    width: 100%;
     #js-menu-icon {
         z-index: 6;
         width: 60px;
@@ -234,12 +233,12 @@ footer {
 
 #js-menu-icon.open span:nth-child(1),
 #js-menu-icon.open span:nth-child(6) {
-    @include transform(rotate(0deg));
+    @include transform(rotate(45deg));
 }
 
 #js-menu-icon.open span:nth-child(2),
 #js-menu-icon.open span:nth-child(5) {
-    @include transform(rotate(0deg));
+    @include transform(rotate(-45deg));
 }
 
 #js-menu-icon.open {
@@ -292,11 +291,18 @@ footer {
         font-weight: 400;
         text-align: center;
         text-decoration: none;
-        padding: 10px auto;
         text-transform: uppercase;
     }
-
+    .header-icon-sp{
+        img{
+            width: 34px;
+        }
+    }
+    ul{
+        text-align: center;
+    }
 }
+
 @media only screen and (max-width: 767px){
     .footer-info{
        p{
@@ -309,7 +315,6 @@ footer {
         padding-bottom: 35px;
         padding-top: 50px;
         width: 60px;
-        height: 144px;
             img{
                 width: 100%;
             }
@@ -320,7 +325,10 @@ footer {
             padding-bottom: 25px;
         }
         &__block3 {
-            padding: 35px 0 38px 0;
+            padding-top: 35px;
+            ul{
+                padding-bottom: 35px;
+            }
             li{
                 width: 34px;
                 height: 34;
