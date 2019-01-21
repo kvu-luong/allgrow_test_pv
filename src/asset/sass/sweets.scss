@@ -8,8 +8,8 @@ header{
 }
 .header-info{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-direction(column);
+    @include align-items(center);
     user-select: none;
     h1{
         padding-top: 120px;
@@ -51,13 +51,14 @@ header{
             color: #ffffff;
             font-family: "Muli";
             font-weight: 700;
+            text-transform: uppercase;
         }
     }
 }
 /* sweet 1 */
 .sweet-1{
     display: flex;
-    flex-direction: column;
+    @include flex-direction(column);
     justify-content: center;
     &__block{
         display: flex;
@@ -86,7 +87,7 @@ header{
         font-size: 36px;
         letter-spacing: 4px;
         line-height: 54px;
-        color: #642200;
+        color: $color-origin;
         font-family: $font-sub;
         font-weight: 700;
         text-align: center;
@@ -95,14 +96,18 @@ header{
             font-family: $font-muli;
             font-weight: 700;
         }
+
+
+
     }
     h3{
         font-size: 16px;
         letter-spacing: 2px;
         line-height: 32px;
-        color: #642200;
+        color: $color-origin;
         font-weight: 700;
         padding-bottom: 30px;
+
     }
     p{
         font-size: 14px;
@@ -123,18 +128,18 @@ header{
         text-align: center;
         width: 220px;
         height: 36px;
-        background-color: #642200;;
-        transition: all 0.2s;
+        background-color: $color-origin;;
+        @include transition(.2s ease-in-out);
         &:hover{
             cursor: pointer;
-            color: #642200;
+            color: $color-origin;
             background-color: #ffffff;
-            border: 2px solid #642200;  
+            border: 2px solid $color-origin;  
         }
     }
 }
 .sweet-line{
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid $color-sub;
     width: 100%;
 }
 /* sweet 2 */
@@ -155,10 +160,11 @@ header{
         font-size: 36px;
         letter-spacing: 4px;
         line-height: 54px;
-        color: #642200;
+        color: $color-origin;
         font-family: $font-sub;
         font-weight: 700;
         text-align: center;
+        position: relative;
     }
     .bake{
         font-family: $font-muli;
@@ -169,9 +175,9 @@ header{
         font-size: 16px;
         letter-spacing: 2px;
         line-height: 36px;
-        color: #642200;
+        color: $color-origin;
         font-weight: 700;
-        border-bottom: 1px dashed #642200;
+        border-bottom: 1px dashed $color-origin;
         padding-bottom: 15px;
     }
     .container-inside{
@@ -208,7 +214,7 @@ header{
         font-size: 36px;
         letter-spacing: 4px;
         line-height: 54px;
-        color: #642200;
+        color: $color-origin;
         font-family: $font-sub;
         font-weight: 700;
         text-align: center;
@@ -219,7 +225,7 @@ header{
         }
     }
     button{
-        background-color: #642200;
+        background-color: $color-origin;
         border: none;
         font-size: 16px;
         letter-spacing: 2px;
@@ -231,9 +237,9 @@ header{
         margin-top: 50px;
         &:hover{
             cursor: pointer;
-            color: #642200;
+            color: $color-origin;
             background-color: #ffffff;
-            border: 2px solid #642200;
+            border: 2px solid $color-origin;
         }
     }
     img{
@@ -243,7 +249,7 @@ header{
 .block-item{
     width: 320px;
     box-sizing: border-box;
-    border: 1px solid #cccccc;
+    border: 1px solid $color-sub;
     font-weight: 500;
     padding: 0 10px;
     margin-right: 20px;
@@ -257,8 +263,9 @@ header{
         font-size: 16px;
         letter-spacing: 2px;
         line-height: 36px;
-        color: #642200;
-        border-bottom: 1px dashed #cccccc;
+        color: $color-origin;
+        font-weight: 500;
+        border-bottom: 1px dashed $color-sub;
     }
     p{
         font-size: 14px;
@@ -268,6 +275,7 @@ header{
         text-align: left;
         padding-top: 15px;;
         padding-bottom: 35px;
+        font-weight: 500;
     }
     img{
         display: flex;
@@ -275,4 +283,130 @@ header{
         height: 65px;
         width: 52px;
     }
+}
+@media only screen and (max-width: 767px){
+    /*header */
+    .header-info{
+        .nav-bar{
+            display: none;
+        }
+    }
+    /* sweet 1 */
+    .sweet-1{
+        &__block{
+            @include flex-direction(column-reverse);
+            &:last-child{
+                @include flex-direction(column);
+                text-align: center;
+                padding-left: 0px;
+            }
+        }
+        .block__small{
+            width: 100%;
+            max-width: unset;
+            img{
+                width: 100%;
+                object-fit: scale-down;
+            }
+        }
+        .block__big{
+            width: 100%;
+            padding-right: 0px;
+            text-align: center;
+            &:last-child{
+                padding-left: 0px;
+            }
+        }
+        h2{
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 80px;
+            .moco{
+                font-size: 11px;
+            }
+        }
+        h3{
+            font-size: 15px;
+            letter-spacing: 3px;
+            line-height: 60px;
+        }
+        p{
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 48px;
+        }
+        button{
+            font-size: 15px;
+            letter-spacing: 3px;
+            max-width: 670px;
+            max-height: 72px;
+        }
+    }
+    /*sweet 2 */
+    .sweet-2{
+        h2{
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 80px;
+        }
+        .bake{
+            font-size: 11px;
+        }
+        h3{
+            font-size: 15px;
+            letter-spacing: 3px;
+            line-height: 60px;
+        }
+        p{
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 48px;
+        }
+        .container-inside,
+        .js-sweet__slider{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    /* sweet 3 */
+    .sweet-3__info{
+        h2{
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 80px;
+            .voice{
+                font-size: 11px;
+            }
+            
+        }
+        &__block{
+        
+            @include flex-direction(column);
+            @include align-items(center);
+        }
+        .block-item{
+            margin-right: 0px;
+        }
+        h3{
+            font-size: 15px;
+            letter-spacing: 3px;
+            line-height: 60px;
+        }
+        p{
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 48px;
+        }
+        button{
+            font-size: 15px;
+            letter-spacing: 3px;
+            line-height: 30px;
+            max-width: 670px;
+            max-height: 72px;
+        }
+
+    }
+    
+   
+
 }
