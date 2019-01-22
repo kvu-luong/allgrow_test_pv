@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if ($("#js-menu-icon").hasClass("open")) {
             $(".js-navbar-sp").css("display", "flex");
-            $("  #js-menu-icon").css("margin", "0px 0px 0 0");
+            $("  #js-menu-icon").css("margin", "30px 30px 0 0");
         } else {
             $(".js-navbar-sp").css("display", "none");
             $("  #js-menu-icon").css("margin", "30px 30px 0 0");

@@ -280,12 +280,13 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 5;
+    padding-top: 80px;
     @include justify-content(center);
 
     a {
         font-size: 18px;
         letter-spacing: 4px;
-        line-height: 91px;
+        line-height: 90px;
         color: $color-origin;
         font-family: $font-muli;
         font-weight: 400;
@@ -294,12 +295,21 @@ footer {
         text-transform: uppercase;
     }
     .header-icon-sp{
+        span{
+            padding-right: 15px;
+            &:last-child{
+                padding-right: 0px;
+            }
+        }
         img{
             width: 34px;
         }
     }
     ul{
         text-align: center;
+    }
+    li{
+        cursor: pointer;
     }
 }
 
