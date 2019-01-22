@@ -179,7 +179,7 @@ footer {
     width: 100%;
     #js-menu-icon {
         z-index: 6;
-        width: 60px;
+        width: 45px;
         position: fixed;
         top: 0;
         right: 0;
@@ -198,7 +198,7 @@ footer {
 #js-menu-icon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 4px;
     width: 50%;
     background: #d3531a;
     opacity: 1;
@@ -244,12 +244,12 @@ footer {
 #js-menu-icon.open {
     span:nth-child(1) {
         left: 5px;
-        top: 7px;
+        top: 11px;
     }
 
     span:nth-child(2) {
         left: calc(50% - 5px);
-        top: 7px;
+        top: 11px;
     }
 
     span:nth-child(3) {
@@ -264,12 +264,12 @@ footer {
 
     span:nth-child(5) {
         left: 5px;
-        top: 29px;
+        top: 24px;
     }
 
     span:nth-child(6) {
         left: calc(50% - 5px);
-        top: 29px;
+        top: 24px;
     }
 }
 
@@ -286,7 +286,7 @@ footer {
     a {
         font-size: 18px;
         letter-spacing: 4px;
-        line-height: 90px;
+        line-height: 80px;
         color: $color-origin;
         font-family: $font-muli;
         font-weight: 400;
@@ -298,7 +298,7 @@ footer {
         span{
             padding-right: 15px;
             &:last-child{
-                padding-right: 0px;
+                padding-right: 0;
             }
         }
         img{

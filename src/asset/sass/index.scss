@@ -25,6 +25,7 @@
         padding-bottom: 77px;
         user-select: none;
         img{
+            padding-top: 60px;
             width: 138px;
             height: 163px;
         }
@@ -133,7 +134,7 @@
     }
    
     .background__info{
-        margin-right: 140px;
+        margin-right: 130px;
     }
     p{
         font-size: 36px;
@@ -152,6 +153,7 @@
         font-family: $font-muli;
         font-weight: 400;
         padding-left: 70px;
+        text-transform: uppercase;
     }
     button{
         margin-bottom: 35px;
@@ -210,6 +212,7 @@
             color: $color-origin;
             font-family: $font-muli;
             font-weight: 400;
+            text-transform: uppercase;
         }
     }
     .info__right{
@@ -217,7 +220,7 @@
         padding-top: 110px;
     }
     button{
-        margin-top: 40px;
+        margin-top: 25px;
         border: none;
         font-size: 16px;
         letter-spacing: 2px;
@@ -360,6 +363,9 @@
         .nav-bar{
             display: none;
         }
+    }
+    .logo{
+        padding-bottom: 0px;
     }
 }
 .js-header-info__slider{

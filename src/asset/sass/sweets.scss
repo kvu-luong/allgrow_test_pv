@@ -356,6 +356,8 @@ header{
             font-size: 20px;
             letter-spacing: 4px;
             line-height: 35px;
+            padding-top: 60px;
+            padding-bottom: 45px;
         }
         .bake{
             font-size: 11px;
@@ -389,7 +391,7 @@ header{
             font-size: 20px;
             letter-spacing: 4px;
             line-height: 35px;
-            padding-top: 36px;
+            padding-top: 60px;
             padding-bottom: 45px;
             .voice{
                 font-size: 11px;
@@ -401,6 +403,7 @@ header{
             @include align-items(center);
             max-width: 670px;
             margin: 0 auto;
+            padding-top: 0px;
         }
         .block-item{
             margin-right: 0px;
@@ -429,6 +432,8 @@ header{
             line-height: 30px;
             width: 100%;
             max-height: 72px;
+            max-width: 670px;
+            margin: 30px auto 0px auto;
         }
 
     }
