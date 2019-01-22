@@ -11,7 +11,7 @@ header{
     @include flex-direction(column);
     @include align-items(center);
     user-select: none;
-    h1{
+    .logo{
         padding-top: 120px;
         padding-bottom: 80px;
     }
@@ -289,6 +289,11 @@ header{
     .header-info{
         .nav-bar{
             display: none;
+        }
+        .logo{
+            img{
+                width: 112px;
+            }
         }
     }
     /* sweet 1 */
