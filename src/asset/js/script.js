@@ -3,13 +3,6 @@ $(document).ready(function () {
     setting_slick(".js-header-info__slider");
     setting_slick(".js-sweet__slider");
 
-    var browser_w = $(window).width();
-    console.log(browser_w);
-    if (browser_w < 768) {
-        $(".header-sp").css("display", "block");
-    } else {
-        $(".header-sp").css("display", "none");
-    }
     $('#js-menu-icon').click(function () {
         $(this).toggleClass('open');
 

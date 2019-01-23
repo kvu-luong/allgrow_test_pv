@@ -1,3 +1,5 @@
+@import "reset";
+
 $font-origin : "游ゴシック",
 YuGothic,
 "ヒラギノ角ゴ Pro",
@@ -313,6 +315,7 @@ footer {
     }
 }
 
+
 @media only screen and (max-width: 767px){
     .footer-info{
        p{
@@ -352,5 +355,7 @@ footer {
         }
 
     }
-    
+    .header-sp{
+        display: block;
+    }
 }

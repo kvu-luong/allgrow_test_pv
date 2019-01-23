@@ -121,13 +121,13 @@
     }
     .left-background{
         position: relative;
-        background-color:white;    
+        background-color:rgba(255, 255, 255,0.8); 
         max-width: 524px;
         max-height: 244px; 
     }
     .right-background{
         position: relative;
-        background-color:white; 
+        background-color:rgba(255, 255, 255,0.8);
         max-width: 524px;
     }
    
@@ -139,7 +139,8 @@
         letter-spacing: 4px;
         line-height: 45px;
         color: $color-origin;
-        font-weight: bold;
+        font-family: $font-sub;
+        font-weight: 700;
         padding-bottom: 28px;
         padding-left: 70px;
     }
@@ -305,35 +306,37 @@
         border: 1px solid #b3b3b3;
         display: flex;
         margin-bottom: 15px;
-        background-color: white;
+        background-color: #fff3e1;
         &:nth-of-type(3n){
             margin-bottom: 0px;
         }
     }
     .item__left{
         max-width: 100px;
+        max-height: 80px;
 
     }
     img{
-        width: 100%;
+        width: 80px;
         height: 100%;
     }
     .item__right{
         max-width: 200px;
-        padding-left: 15px;
-        padding-top: 15px;
-        p{
+        padding: 10px 5px 5px 15px;
+        p:last-child{
             font-size: 13px;
             line-height: 20px;
             color: #000000;
             font-weight: 500;
+            padding-bottom: 15px;
         }
-        &__date{
-            font-size: 13px;
-            line-height: 26px;
-            color: $color-origin;
-            font-weight: 500;
+        p:first-child{
+                font-size: 13px;
+                line-height: 26px;
+                color: $color-origin;
+                font-weight: 500;
         }
+        
     }
     h3{
         border-bottom: 1px solid $color-origin;
